@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <link rel="stylesheet" href="./paymentFormStyle.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <div class="payment-container">
+        <div class="product-info">
+            <ion-icon name="bag-outline" class="bag-icon" ></ion-icon>
+            <div class="product">
+                <div class="">
+                    <h2>Native Youth Jacket</h2>
+                <p>by Michael Hanson</p>
+                </div>
+                <span class="price">$35</span>
+            </div>
+            <div class="product">
+                <div class="">
+                    <h2>Symmetry T-Shirt</h2>
+                <p>by Joshua Coleman</p>
+                </div>
+                <span class="price">$27</span>
+            </div>
+            <div class="summary">
+                <p>Available <span>$0.00</span></p>
+                <p>Fee <span>$0.34</span></p>
+            </div>
+            <div class="powered-by">
+                <p>Powered by <strong>stripe</strong></p>
+            </div>
+        </div>
+
+
+        <div class="payment-form">
+            <form>
+                <div class="payment-method">
+                    <label>
+                        <input type="radio" name="payment" value="balance">
+                        Balance
+                    </label>
+                    <label>
+                        <input type="radio" name="payment" value="credit-card" checked>
+                        Credit Card
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+
+                <div class="credit-info">
+                    <div class=" card-number">
+                        <input type="text" placeholder="Card Number" required>
+                    </div>
+                    <div class=" inline">
+                        <input type="text" placeholder="MM/YYYY" required>
+                        <input type="text" placeholder="CVC" required>
+                    </div>
+                </div>
+
+                <div class="remember-me">
+                    <label>
+                        <input type="checkbox">
+                        Remember Me
+                    </label>
+                </div>
+                <button type="submit">Pay $62.34</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
