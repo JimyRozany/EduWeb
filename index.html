@@ -109,11 +109,11 @@
           <span class="btn-badge">0</span>
         </button>
 
-        <a href="#" class="btn has-before" id="login-btn">
+        <button href="#" class="btn has-before" id="login-btn">
           <span class="span">Login</span>
 
           <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-        </a>
+        </button>
 
         <button class="header-action-btn" aria-label="open menu" data-nav-toggler>
           <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
@@ -127,7 +127,8 @@
   </header>
 
 <!-- ********** login card popup ********** -->
-<div class="test-div">
+
+<div class="login-area" id="login-area">
   <div class="wrapper-login">
     <span class="icon-close">
         <ion-icon name="close-outline"></ion-icon>
@@ -217,9 +218,11 @@
 </div>
 
 
-<!-- end login card popup -->
+<!-- ********** end login card popup **********-->
+
  <!-- ***************** payment card popup ***************** -->
- <!-- <div class="payment-area">
+
+<div class="payment-area" id="payment-area">
  <div class="payment-container" id="payment-container" >
   <span class="icon-close" id="payment-close-btn">
     <ion-icon name="close-outline"></ion-icon>
@@ -228,10 +231,10 @@
       <ion-icon name="bag-outline" class="bag-icon" ></ion-icon>
       <div class="product">
           <div class="">
-              <h2>Native Youth Jacket</h2>
+              <h2 class="payment-card-title">Native Youth Jacket</h2>
           <p>by Michael Hanson</p>
           </div>
-          <span class="price">$35</span>
+          <span class="price payment-card-price">$35</span>
       </div>
       <div class="product">
           <div class="">
@@ -288,7 +291,7 @@
 
 
          <!-- checkbox Remember me from payment -->
-<!-- 
+
 <div class="checkbox-wrapper-46">
   <input type="checkbox" id="cbx-46" class="inp-cbx" />
   <label for="cbx-46" class="cbx"
@@ -298,14 +301,15 @@
     ><span>Remember Me</span>
   </label>
 </div>
- -->
+
 <!-- ****** end checkbox Remember me from payment -->
- <!-- 
+
           <button type="submit">Pay $62.34</button>
       </form>
   </div>
 </div>
-</div> -->
+</div> 
+
  <!-- ***************** end payment card popup ***************** -->
 
 
@@ -560,7 +564,7 @@
           <ul class="grid-list">
 
             <li>
-              <div class="course-card">
+              <div class="course-card" onclick="showPaymentCard(this)">
 
                 <figure class="card-banner img-holder" style="--width: 370; --height: 220;">
                   <img src="./assets/images/course-1.jpg" width="370" height="220" loading="lazy"
@@ -577,8 +581,8 @@
 
                   <span class="badge">Beginner</span>
 
-                  <h3 class="h3" id="cor-btn">
-                    <a href="#" class="card-title" >Build Responsive Real- World Websites with HTML and CSS</a>
+                  <h3 class="h3" >
+                    <button class="card-title" >Build Responsive Real- World Websites with HTML and CSS</button>
                   </h3>
 
                   <div class="wrapper">
@@ -619,7 +623,7 @@
             </li>
 
             <li>
-              <div class="course-card">
+              <div class="course-card" onclick="showPaymentCard(this)">
 
                 <figure class="card-banner img-holder" style="--width: 370; --height: 220;">
                   <img src="./assets/images/course-2.jpg" width="370" height="220" loading="lazy"
@@ -636,8 +640,8 @@
 
                   <span class="badge">Advanced</span>
 
-                  <h3 class="h3" id="course-2">
-                    <a href="#" class="card-title">Java Programming Masterclass for Software Developers</a>
+                  <h3 class="h3" >
+                    <button class="card-title">Java Programming Masterclass for Software Developers</button>
                   </h3>
 
                   <div class="wrapper">
@@ -678,7 +682,7 @@
             </li>
 
             <li>
-              <div class="course-card">
+              <div class="course-card" onclick="showPaymentCard(this)">
 
                 <figure class="card-banner img-holder" style="--width: 370; --height: 220;">
                   <img src="./assets/images/course-3.jpg" width="370" height="220" loading="lazy"
@@ -695,8 +699,8 @@
 
                   <span class="badge">Intermediate</span>
 
-                  <h3 class="h3" id="course-3">
-                    <a href="#" class="card-title">The Complete Camtasia Course for Content Creators</a>
+                  <h3 class="h3">
+                    <button class="card-title">The Complete Camtasia Course for Content Creators</button>
                   </h3>
 
                   <div class="wrapper">
