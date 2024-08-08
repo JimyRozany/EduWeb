@@ -32,6 +32,7 @@
   --black_30: hsla(0, 0%, 0%, 0.3);
   --kappel: hsl(170, 75%, 41%);
   --white: hsl(0, 0%, 100%);
+  --surface-color: #fff;
 
   /**
    * gradient color
@@ -84,6 +85,7 @@
   --radius-3: 3px;
   --radius-5: 5px;
   --radius-10: 10px;
+  --curve: 40;
 
   /**
    * transition
@@ -186,9 +188,6 @@ body {
   background-color: hsl(0, 0%, 70%);
 }
 
-
-
-
 .login-area {
   /* border: 1px solid red; */
   display: flex;
@@ -209,7 +208,7 @@ body {
   height: 440px;
   background: transparent;
   border-radius: 0 20px 0 20px;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(20px);
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   transform: scale(0);
@@ -218,6 +217,7 @@ body {
   align-items: center;
   transition: transform 0.5s ease, height 0.2s ease;
   z-index: 999;
+  font-family: var(--ff-league_spartan);
 }
 
 .wrapper-login.active-popup {
@@ -262,7 +262,7 @@ body {
   height: 45px;
   /* background: rgb(16, 234, 234); */
   font-size: 2em;
-  color: var(--black_50);
+  color: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -304,10 +304,10 @@ body {
 }
 
 .input-box input:focus ~ label,
-.input-box input:valid ~ label {
+.input-box input:valid ~ label{
   top: -5px;
-  color: var(--black_50);
-  font-size: 14px ;
+  color: black;
+  font-size: 14px;
 }
 
 .input-box input {
@@ -319,7 +319,6 @@ body {
   font-size: 1em;
   font-weight: 600;
   padding: 0 35px 0 5px;
-  
 }
 
 .input-box .icon {
@@ -340,7 +339,6 @@ body {
   display: flex;
   gap: 10px;
   /* justify-content: space-between; */
- 
 }
 /* .remember-forgot input[type="checkbox"] {
   accent-color: var(--kappel);
@@ -367,15 +365,14 @@ body {
   user-select: none;
 }
 
-
 /* Custom checkmark (box) */
 .custom-checkbox .checkmark {
   position: absolute;
   top: 50%;
   left: 0;
-  transform: translate(0 ,-50%);
+  transform: translate(0, -50%);
   height: 20px; /* Change this value to resize */
-  width: 20px;  /* Change this value to resize */
+  width: 20px; /* Change this value to resize */
   background-color: #ccc;
   border-radius: 4px; /* Optional for rounded corners */
 }
@@ -408,12 +405,8 @@ body {
   transform: rotate(45deg);
 }
 
-
-
-
-
 /* ********************* payment card style ************  */
-.payment-area{
+.payment-area {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -424,8 +417,8 @@ body {
 
   z-index: 998;
 
-   transform: scale(0);
-   transition: transform .5s ease, height .2s ease;
+  transform: scale(0);
+  transition: transform 0.5s ease, height 0.2s ease;
 }
 .payment-container {
   display: flex;
@@ -435,26 +428,24 @@ body {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
   border-radius: 8px;
   overflow: hidden;
-  font-family: var( --ff-poppins) ;
+  font-family: var(--ff-poppins);
   position: relative;
-  
 
   /* transform: scale(0); */
 }
-.payment-container .icon-close{
+.payment-container .icon-close {
   position: absolute;
-  top: 0px ;
+  top: 0px;
   right: 0px;
   font-size: 20px;
   padding: 10px;
   border-radius: 0 0 0 20px;
-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
-.payment-container .icon-close:hover{
+.payment-container .icon-close:hover {
   cursor: pointer;
   background-color: #3388ffb0;
   color: var(--white);
-  
 }
 
 .payment-container .product-info {
@@ -463,7 +454,7 @@ transition: all 300ms ease-in-out;
   padding: 20px;
   width: 50%;
 }
-.payment-container .product-info .bag-icon{
+.payment-container .product-info .bag-icon {
   font-size: 50px;
   display: block;
 }
@@ -473,7 +464,6 @@ transition: all 300ms ease-in-out;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
 .payment-container .product-info .product h2 {
@@ -509,16 +499,16 @@ transition: all 300ms ease-in-out;
 
 .payment-container .powered-by {
   margin-top: 20px;
-display: flex;
-justify-content: right;
+  display: flex;
+  justify-content: right;
 }
 
-.payment-container .powered-by > p{
-font-size: 14px;  
+.payment-container .powered-by > p {
+  font-size: 14px;
 }
-.payment-container .powered-by > p > strong{
- font-size: 28px;
- font-weight: 700;
+.payment-container .powered-by > p > strong {
+  font-size: 28px;
+  font-weight: 700;
 }
 
 .payment-container .payment-form {
@@ -591,13 +581,12 @@ font-size: 14px;
   box-shadow: 0 0 20px #4c8bf580;
 }
 
-
 /* ********* end payment method ********* */
 
 .payment-container .form-group {
- margin: 20px 0;
- padding: 10px;
- border: 1px solid #cccccc ;
+  margin: 20px 0;
+  padding: 10px;
+  border: 1px solid #cccccc;
 }
 
 .payment-container .form-group input {
@@ -605,15 +594,14 @@ font-size: 14px;
   outline: none;
   font-size: 16px;
 }
-.payment-container .credit-info{
-
+.payment-container .credit-info {
   border: 1px solid #ccc;
 }
 .payment-container .credit-info input {
   border: none;
   outline: none;
 }
-.payment-container .card-number{
+.payment-container .card-number {
   padding: 10px;
   border-bottom: 1px solid #ccc;
 }
@@ -624,7 +612,7 @@ font-size: 14px;
   border-top: none;
   padding: 10px;
 }
-.payment-container .credit-info .inline :first-child{
+.payment-container .credit-info .inline :first-child {
   border-right: 1px solid #ccc;
 }
 
@@ -635,7 +623,7 @@ font-size: 14px;
 /* ********************* remember me ***************** */
 .checkbox-wrapper-46 {
   margin: 10px 0;
-} 
+}
 .checkbox-wrapper-46 input[type="checkbox"] {
   display: none;
   visibility: hidden;
@@ -716,8 +704,7 @@ font-size: 14px;
 
 /* ********************* end remember me ***************** */
 
-
-.payment-container .payment-form  button {
+.payment-container .payment-form button {
   background-color: #3388ff;
   color: white;
   border: none;
@@ -729,24 +716,16 @@ font-size: 14px;
 }
 
 .payment-container button:hover {
-  background-color:#1174ff;
+  background-color: #1174ff;
 }
 
 /*  ******************* end payment card style ******************* */
-
-
-
-
-
-
-
 
 /* ******************************************************************** */
 
 .remember-forgot label {
   accent-color: black;
   margin-right: 3px;
-  
 }
 
 .remember-forgot a {
@@ -1394,6 +1373,147 @@ font-size: 14px;
   margin-inline: auto;
   margin-block-start: 60px;
 }
+.lang-course {
+  opacity: 0;
+  overflow: hidden;
+  transform: scale(0);
+  height: 0;
+  overflow: hidden;
+  transition: transform 0.5s ease-in-out, height 0.5s ease-in-out,
+    overflow 0.5s ease-in-out, opacity 0.5s ease-in-out;
+
+  margin-bottom: 10px;
+  padding: 20px;
+
+  font-family: "Noto Sans JP", sans-serif;
+  background-color: var(--isabelline);
+
+}
+
+/*  ********* lang card ********* */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 4rem 5vw;
+  padding: 0;
+  list-style-type: none;
+  /* transform: scale(0); */
+}
+
+.card {
+  position: relative;
+  display: block;
+  height: 100%;
+  border-radius: calc(var(--curve) * 1px);
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.card__image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  border-radius: calc(var(--curve) * 1px);
+  background-color: var(--surface-color);
+  transform: translateY(100%);
+  transition: 0.2s ease-in-out;
+}
+
+.card:hover .card__overlay {
+  transform: translateY(0);
+}
+
+.card__header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  padding: 2em;
+  border-radius: calc(var(--curve) * 1px) 0 0 0;
+  background-color: var(--surface-color);
+  transform: translateY(-100%);
+  transition: 0.2s ease-in-out;
+}
+
+.card__arc {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  z-index: 1;
+}
+
+.card__arc path {
+  fill: var(--surface-color);
+  d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+}
+
+.card:hover .card__header {
+  transform: translateY(0);
+}
+
+.card__thumb {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card__title {
+  font-size: 1em;
+  margin: 0 0 0.3em;
+  color: #6a515e;
+}
+
+.card__tagline {
+  display: block;
+  margin: 1em 0;
+  font-family: "MockFlowFont";
+  font-size: 0.8em;
+  color: #d7bdca;
+}
+
+.card__status {
+  font-size: 0.8em;
+  /* color: #D7BDCA; */
+  color: var(--black_50);
+}
+
+.card__description {
+  padding: 0 2em 2em;
+  margin: 0;
+  color: var(--black_50);
+  font-family: "MockFlowFont";
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+/*  ********* end  lang card ********* */
+
+.show-lang-course {
+  opacity: 1;
+  overflow: visible;
+  transform: scale(1);
+  height: 940px;
+  
+}
+
+#more-courses-arrow{
+  transition: rotate 0.5s ease-in-out;
+}
 
 /*-----------------------------------*\
   #VIDEO
@@ -1408,6 +1528,7 @@ font-size: 14px;
   position: relative;
   border-top-right-radius: 80px;
   border-bottom-left-radius: 120px;
+  margin-top: -50px;
 }
 
 .video .play-btn {
